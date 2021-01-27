@@ -33,7 +33,7 @@ function Navbar(props) {
 
       </nav>} */}
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-gradient"  style={{backgroundColor: "#e3f2fd"}}>
+      <nav class="navbar navbar-expand-lg navbar-light bg-gradient fixed-top"  style={{backgroundColor: "#e3f2fd"}}>
         <div class="container-fluid p-3">
             <Link to="/create-applicant" className="navbar-brand">Candidate Tracker</Link>
           
