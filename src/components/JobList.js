@@ -26,24 +26,32 @@ function JobList(props) {
     }
 
     return (
-        <div> 
-            {
-                props.queryString ? <h3>Search Results</h3> : <h3>All Jobs</h3>
-            }
-            
-            <table className="table">
-                <thead className="thead-light">
-                    <tr>
-                    <th>Name</th>
-                    <th>Job Code</th>
-                    <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    { generateJobList() }
-                </tbody>
-            </table>
+        <div>
+            <div class="card border-success">
+                <div class="card-header border-success text-success text-uppercase">
+                    {
+                        props.queryString ? "Search Results" : "All Jobs"
+                    }
+                </div>
+                <div class="card-body">
+                    <div className="table-responsive-md">
+                        <table className="table table-hover">
+                            <thead className="table-light">
+                                <tr>
+                                <th>Name</th>
+                                <th>Job Code</th>
+                                <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                { generateJobList() }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
         </div>
+            
     )
 }
 

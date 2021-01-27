@@ -1,6 +1,7 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import 'font-awesome/css/font-awesome.min.css';
+import {Switch, Route} from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import CreateApplicant from './components/CreateApplicant';
