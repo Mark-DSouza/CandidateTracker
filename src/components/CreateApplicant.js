@@ -43,10 +43,25 @@ class CreateApplicant extends React.Component {
         const salary = Number.parseFloat(this.state.salary);
         const newApplicant = {...this.state, salary: salary};
         console.log(newApplicant)
-        // axios.post('http://localhost:5000/applicant', newApplicant)
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
-        //     .catch(err => console.log('Error: ', err))
+        axios.post('http://localhost:5000/applicants', newApplicant)
+            .then(res => console.log(res.data))
+            .catch(err => console.log('Error: ', err))
+        this.setState(
+            {
+                name: "",
+                email: "",
+                phone: "",
+                location: "",
+                salary: "",
+                noticePeriod: "",
+                jobCode: "",
+                description: "",
+                knowsReact: false,
+                knowsAngular: false,
+                knowsMongo: false,
+                knowsExpress: false,
+            }
+        )
     }
 
     render() {

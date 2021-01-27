@@ -1,9 +1,11 @@
 import React from 'react';
+import ApplicantList from './ApplicantList';
 
 class SearchApplicant extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            queryString: "",
             name: "",
             knowsReact: false,
             knowsAngular : false,
@@ -40,15 +42,8 @@ class SearchApplicant extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         const currentState = {...this.state};
-        this.setState({
-            name: "",
-            knowsReact: false,
-            knowsAngular : false,
-            knowsMongo: false,
-            knowsExpress: false
-        })
+        delete currentState.queryString;
 
-        console.log(currentState);
         currentState.name = currentState.name.trim();
 
         let queryString = "";
@@ -60,15 +55,17 @@ class SearchApplicant extends React.Component {
             for (const property in currentState) {
                 if (currentState[property]) {
                     if (index > 0) {
-                        queryString = queryString + '&'
+                        queryString = queryString.concat('&'); 
                     }
-                    queryString = queryString + `${property}=${currentState[property]}`;
+                    queryString = queryString.concat(`${property}=${currentState[property]}`);
                     index++;
                 }
             }
         }
 
-        console.log(queryString)
+        this.setState({
+            queryString: queryString
+        })
     }
 
     render() {
@@ -156,11 +153,8 @@ class SearchApplicant extends React.Component {
                     <button type="submit" className="btn btn-success">Search</button>
                 </form>
 
-                    {/* {<Switch>
-                        <Route path="/">
-                            <JobList />
-                        </Route>
-                    </Switch>} */}
+                <ApplicantList queryString={this.state.queryString} />
+
             </div>
         )
     }

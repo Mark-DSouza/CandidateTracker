@@ -31,9 +31,8 @@ class CreateJob extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         const newJob = {...this.state};
-        axios.post('http://localhost:5000/job', newJob)
-            .then(res => res.json())
-            .then(data => console.log(data))
+        axios.post('http://localhost:5000/jobs', newJob)
+            .then(res => console.log(res.data))
             .catch(err => console.log('Error: ', err))
 
         

@@ -8,6 +8,7 @@ import CreateJob from './components/CreateJob';
 import SearchApplicant from './components/SearchApplicant';
 import SearchJob from './components/SearchJob';
 import JobPage from './components/JobPage';
+import AppPage from './components/AppPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/applicants"><SearchApplicant /></Route>
         <Route exact path="/jobs"><SearchJob /></Route>
         <Route exact path="/jobs/job/:id"><JobPage /></Route>
+        <Route exact path="/applicants/applicant/:id"><AppPage /></Route>
       </Switch>
     </div>
   );

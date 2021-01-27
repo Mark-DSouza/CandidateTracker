@@ -6,7 +6,7 @@ function initialState(scaffold) {
     techonologies.forEach((technology) => {
         initState[`knows${technology}`] = false;
     })
-    console.log(initState)
+    console.log(initState);
     return initState;
 }
 
