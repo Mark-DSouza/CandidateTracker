@@ -84,7 +84,7 @@ exports.updateApplicant = async (req, res) => {
 
 exports.deleteApplicant = async (req, res) => {
     try {
-      await Tour.findByIdAndDelete(req.params.id);
+      await Applicant.findByIdAndDelete(req.params.id);
   
       res.status(204).json({
         status: 'success',

@@ -7,8 +7,6 @@ exports.getAllJobs = async (req, res) => {
       const features = new APIFeatures(Job.find(), req.query)
         .filter()
         .sort()
-        .limitFields()
-        .paginate();
       const jobs = await features.query;
   
       // SEND RESPONSE
