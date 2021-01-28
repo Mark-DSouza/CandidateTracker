@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {Check, X} from 'react-bootstrap-icons';
+import JobPagePresentation from '../presentation/JobPagePresentation';
+
 
 
 function JobPage(props) {
@@ -15,7 +16,9 @@ function JobPage(props) {
     }, [])
 
     return (
-        <div className="container">
+        <React.Fragment>
+            <JobPagePresentation job={job} />
+        {/* {<div className="container">
 
             <div className="card border-primary my-5">
 
@@ -52,7 +55,8 @@ function JobPage(props) {
                 </div>
             </div>
 
-        </div>
+        </div>} */}
+        </React.Fragment>
     )
 }
 

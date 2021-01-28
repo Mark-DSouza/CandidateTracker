@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {Check, X} from 'react-bootstrap-icons';
+
+import ApplicantPagePresentation from './../presentation/ApplicantPagePresentation';
 
 
 function ApplicantPage(props) {
@@ -15,10 +16,12 @@ function ApplicantPage(props) {
     }, [])
 
     return (
-        <div className="container">
+        <React.Fragment>
+        <ApplicantPagePresentation applicant={applicant}/>
+        {/* {<div className="container">
 
             <div className="card border-primary my-5">
-                <div class="card-header border-primary text-info">
+                <div className="card-header border-primary text-info">
                     Applicant Information
                     
                 </div>
@@ -63,7 +66,8 @@ function ApplicantPage(props) {
                     <button className="btn btn-danger" onClick={() => {}}>Delete Applicant</button>
                 </div>
             </div>
-        </div>
+        </div>} */}
+        </React.Fragment>
     )
 }
 

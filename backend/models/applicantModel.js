@@ -10,6 +10,7 @@ const applicantSchema = new Schema({
   location: {type: String},
   salary: {type: Number},
   noticePeriod: {type: Number},
+  description: {type: String},
   knowsReact: {type: Boolean},
   knowsAngular: {type: Boolean},
   knowsMongo: {type: Boolean},
