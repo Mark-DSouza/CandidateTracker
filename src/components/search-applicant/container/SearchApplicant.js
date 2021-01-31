@@ -71,7 +71,7 @@ class SearchApplicant extends React.Component {
         }
 
         if (queryString) {
-            axios.get(`http://localhost:5000/applicants/?${queryString}`)
+            axios.get(`http://localhost:5000/api/v1/applicants/?${queryString}`)
                     .then(response => this.setState({applicants: response.data.data.applicants}))
                     .catch(error => console.log(error));
         }

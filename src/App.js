@@ -10,6 +10,7 @@ import SearchApplicant2 from './components/search-applicant/container/SearchAppl
 import SearchJob2 from './components/search-job/container/SearchJob';
 import JobPage from './components/job-page/container/JobPage';
 import ApplicantPage from './components/applicant-page/container/ApplicantPage';
+import EditApplicant from './components/edit-applicant/container/EditApplicant';
 
 function App() {
   return (
@@ -20,12 +21,11 @@ function App() {
         <Route exact path="/"><CreateApplicant /></Route>
         <Route exact path="/create-applicant"><CreateApplicant /></Route>
         <Route exact path="/create-job"><CreateJob /></Route>
-        {/* {<Route exact path="/applicants"><SearchApplicant /></Route>
-        <Route exact path="/jobs"><SearchJob /></Route>} */}
         <Route exact path="/applicants"><SearchApplicant2 /></Route>
         <Route exact path="/jobs"><SearchJob2 /></Route>
         <Route exact path="/jobs/job/:id"><JobPage /></Route>
         <Route exact path="/applicants/applicant/:id"><ApplicantPage /></Route>
+        <Route exact path="/applicants/applicant/:id/edit"><EditApplicant /></Route>
       </Switch>
     </div>
   );

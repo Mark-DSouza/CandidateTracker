@@ -11,7 +11,7 @@ function SearchJob(props) {
     const [searchField, setSearchField] = useState("");
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/jobs`)
+        axios.get(`http://localhost:5000/api/v1/jobs`)
             .then(response => setJobs(response.data.data.jobs))
             .catch(err => {setError(err); console.log(err)});
     }, []);
@@ -27,7 +27,7 @@ function SearchJob(props) {
     function handleSubmit(event) {
         event.preventDefault();
         const queryString = `${searchBy}=${searchField}`;
-        axios.get(`http://localhost:5000/jobs/?${queryString}`)
+        axios.get(`http://localhost:5000/api/v1/jobs/?${queryString}`)
                 .then(response => {setDisplayAllJobs(false); setJobs(response.data.data.jobs);})
                 .catch(err => {setError(err); console.log(err)});
         console.log(queryString)

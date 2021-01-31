@@ -57,7 +57,7 @@ class CreateApplicant extends React.Component {
         const noticePeriod = this.checkNumber(this.state.noticePeriod);
         const newApplicant = {...this.state, salary: salary, noticePeriod: noticePeriod};
         console.log(newApplicant)
-        axios.post('http://localhost:5000/applicants', newApplicant)
+        axios.post('http://localhost:5000/api/v1/applicants', newApplicant)
             .then(res => console.log(res.data))
             .catch(err => console.log('Error: ', err))
         this.setState(

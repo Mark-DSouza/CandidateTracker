@@ -29,8 +29,8 @@ mongoose.connect(uri, {
 const applicantsRouter = require('./routes/applicants');
 const jobsRouter = require('./routes/jobs');
 
-app.use('/applicants', applicantsRouter);
-app.use('/jobs', jobsRouter);
+app.use('/api/v1/applicants', applicantsRouter);
+app.use('/api/v1/jobs', jobsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
