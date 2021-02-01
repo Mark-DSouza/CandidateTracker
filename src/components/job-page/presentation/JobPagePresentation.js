@@ -1,6 +1,6 @@
 import React from 'react';
-import {Check, X} from 'react-bootstrap-icons';
 import SkillCheck from './../../utilities/SkillCheck';
+import {Link} from 'react-router-dom'
 
 function JobPagePresentation(props) {
     return (
@@ -37,7 +37,11 @@ function JobPagePresentation(props) {
                 </ul>
                 
                 <div className="card-body">
-                    <button className="btn btn-danger" onClick={() => {}}>Delete Applicant</button>
+                    <Link 
+                        className="btn btn-danger" 
+                        to="/jobs"
+                        onClick={() => props.handleClickDelete()} > Delete Applicant </Link>
+                    
                 </div>
             </div>
 

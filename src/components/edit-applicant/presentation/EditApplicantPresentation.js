@@ -3,7 +3,7 @@ import preventEnterSubmit from './../../utilities/preventEnterSubmit';
 
 function CreateApplicantPresentation(props) {
     return (
-        <div className="container">
+        
                 <div className="card my-5 border-info">
                     <div className="card-body">
                         <h2 
@@ -215,11 +215,11 @@ function CreateApplicantPresentation(props) {
                                 </div>
                             </fieldset>
 
-                            <button type="submit" className="btn btn-success mb-3 ml-3">Create Applicant</button>
+                            <button type="submit" className="btn btn-success mb-3 ml-3">Submit Edited Applicant</button>
                         </form>
                     </div>
                 </div>
-            </div>
+            
     )
 }
 

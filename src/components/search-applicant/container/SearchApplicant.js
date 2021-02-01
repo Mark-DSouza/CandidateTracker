@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import ApplicantList2 from '../presentation/ApplicantList';
 import SearchApplicantPresentation from '../presentation/SearchApplicantPresentation';
 
 class SearchApplicant extends React.Component {

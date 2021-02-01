@@ -35,9 +35,8 @@ class CreateJob extends React.Component {
         axios.post('http://localhost:5000/api/v1/jobs', newJob)
             .then(res => console.log(res.data))
             .catch(err => console.log('Error: ', err))
-
-        
     }
+
     render() {
         return (
             <CreateJobPresentation 

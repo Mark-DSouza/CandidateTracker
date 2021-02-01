@@ -13,10 +13,16 @@ function JobPage(props) {
         axios.get(`http://localhost:5000/api/v1/jobs/${id}`)
         .then(response => setJob(response.data.data.job))
         .catch(error => console.log(error));
-    }, [])
+    }, [id])
+
+    function handleClickDelete() {
+        axios.delete(`http://localhost:5000/api/v1/jobs/${id}`)
+            .then(response => console.log(response.data))
+            .catch(error => console.log(error))
+    }
 
     return (
-        <JobPagePresentation job={job} />
+        <JobPagePresentation job={job} handleClickDelete={handleClickDelete} />
     )
 }
 
